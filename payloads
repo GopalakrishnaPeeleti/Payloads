@@ -1,6 +1,6 @@
 XSS:
 
-If you give Input to any parameter and if they reflect back to yaou there may be xss presents.
+If you give Input to any parameter and if they reflect back to you there may be xss presents.
 
 If your input reflect back and you succeed to execute any javascript code there is xss
 
