@@ -2,3 +2,4 @@ Insert Link:
 
 XSS<iframe></textarea></iframe><iframe srcdoc="<img src onerror=alert(document.domain)>">
 
+https://gist.github.com/soaj1664/9588791
